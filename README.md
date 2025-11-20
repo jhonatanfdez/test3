@@ -1,69 +1,71 @@
-# CodeIgniter 4 Application Starter
+# 🚀 CodeIgniter 4 Modern Experience
 
-## What is CodeIgniter?
+> Un proyecto demostrativo que lleva CodeIgniter 4 al siguiente nivel con interfaces modernas, animaciones fluidas y una arquitectura sólida.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+![CodeIgniter 4](https://img.shields.io/badge/CodeIgniter-4.6-ef4223?style=for-the-badge&logo=codeigniter)
+![PHP](https://img.shields.io/badge/PHP-8.1+-777bb4?style=for-the-badge&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479a1?style=for-the-badge&logo=mysql)
+![CSS3](https://img.shields.io/badge/CSS3-Animations-1572b6?style=for-the-badge&logo=css3)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## ✨ Características Principales
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 👥 v1.1.0 - Dashboard de Usuarios Futurista
+Un sistema de gestión de usuarios que rompe con las tablas aburridas tradicionales.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- **🎨 Diseño Glassmorphism**: Interfaz estilo cristal con efectos de desenfoque y transparencia.
+- **⚡ Animaciones Staggered**: Entrada en cascada de los elementos para una experiencia visual suave.
+- **👤 Avatares Dinámicos**: Generación automática de avatares basados en el nombre del usuario.
+- **📱 Responsive Design**: Adaptación perfecta desde escritorio hasta móvil.
+- **🛠 Backend Robusto**: Implementación completa de Migraciones, Seeders y Modelos.
 
-## Installation & updates
+### 🚀 v1.0.0 - Sistema de Bienvenida 3D
+Una landing page de bienvenida que atrapa al usuario desde el primer segundo.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+- **🌌 Efecto Parallax 3D**: El fondo reacciona al movimiento del mouse.
+- **✨ Partículas Interactivas**: Fondo animado con partículas y estrellas brillantes.
+- **👋 Personalización Dinámica**: Rutas inteligentes que saludan al usuario por su nombre.
+- **💎 UI Moderna**: Gradientes vibrantes y tipografía cuidada.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## 🛠️ Instalación y Configuración
 
-## Setup
+Este proyecto está configurado para funcionar con **DDEV** para una experiencia de desarrollo sin dolor.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/jhonatanfdez/test3.git
+   cd test3
+   ```
 
-## Important Change with index.php
+2. **Iniciar el entorno**
+   ```bash
+   ddev start
+   ```
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+3. **Instalar dependencias**
+   ```bash
+   ddev composer install
+   ```
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+4. **Configurar Base de Datos**
+   ```bash
+   # Ejecutar migraciones
+   ddev exec php spark migrate
+   
+   # Poblar con datos de prueba
+   ddev exec php spark db:seed UsuarioSeeder
+   ```
 
-**Please** read the user guide for a better explanation of how CI4 works!
+5. **¡Disfrutar!**
+   - Bienvenida: `http://test3.ddev.site/bienvenido/TuNombre`
+   - Usuarios: `http://test3.ddev.site/usuarios`
 
-## Repository Management
+## 📝 Rutas Disponibles
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+| Ruta | Descripción |
+|------|-------------|
+| `/bienvenido` | Vista de bienvenida por defecto |
+| `/bienvenido/(:nombre)` | Vista de bienvenida personalizada |
+| `/usuarios` | Dashboard de lista de usuarios |
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-# test3
+---
+Hecho con ❤️ y mucho ☕ usando CodeIgniter 4
