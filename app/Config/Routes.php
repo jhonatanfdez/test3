@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('bienvenido/(:any)', 'Bienvenido::index/$1');
 $routes->get('bienvenido', 'Bienvenido::index');
+$routes->get('usuarios', 'Usuarios::index');
