@@ -6,3 +6,5 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+$routes->get('bienvenido/(:any)', 'Bienvenido::index/$1');
+$routes->get('bienvenido', 'Bienvenido::index');
